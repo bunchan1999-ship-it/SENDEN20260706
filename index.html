@@ -2,100 +2,175 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>テストホームページ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大学教職員もスタンディング（アピール）します！！</title>
     <style>
+        /* 全体の基本設定（洗練されたフォントと背景） */
         body {
             font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
-            text-align: center;
-            background-color: #f7f9fa;
-            padding: 40px 20px;
+            line-height: 1.7;
+            color: #333333;
+            background-color: #f4f7f9;
             margin: 0;
+            padding: 0;
         }
-        
-        /* タイトルのデザイン */
-        h1 {
-            color: #1a1a1a;
-            font-size: 28px;
-            font-weight: 800;
-            margin-bottom: 5px;
-            letter-spacing: 0.05em;
+
+        /* 画面中央に収めるコンテナ */
+        .container {
+            max-width: 680px;
+            margin: 40px auto;
+            padding: 20px;
         }
-        
-        .subtitle {
-            color: #666666;
-            font-size: 16px;
+
+        /* 💡 最も目立たせるメインタイトル部分 */
+        .main-title-box {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); /* 深みのあるブルーのグラデーション */
+            color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
             margin-bottom: 30px;
         }
 
-        /* 💡 お知らせ看板（案内文）のデザイン */
-        .info-card {
-            max-width: 500px;
-            margin: 0 auto;
-            background: #ffffff;
-            padding: 30px 20px;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-            border-top: 8px solid #ff3b30; /* 上部にアクセントカラーの赤線 */
-            text-align: left; /* 文字の頭を揃えて読みやすく */
+        h1 {
+            font-size: 32px;
+            font-weight: 800;
+            margin: 0;
+            line-height: 1.4;
+            letter-spacing: 0.05em;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
 
-        /* 各行のまとまり */
-        .info-row {
-            display: flex;
-            margin-bottom: 20px;
-            line-height: 1.5;
+        /* 💡 開催概要カード（見やすさを追求） */
+        .info-card {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
         }
-        .info-row:last-child {
+
+        .info-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .info-list li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+
+        .info-list li:last-child {
             margin-bottom: 0;
         }
 
-        /* 「日程」などの見出し（ラベル） */
-        .label {
-            font-weight: 800;
-            color: #ff3b30; /* 目立つ赤色 */
-            font-size: 18px;
-            width: 4.5em; /* 幅を揃えて綺麗に整列 */
-            flex-shrink: 0;
-            position: relative;
+        /* 行頭のスタイリッシュなチェックマーク */
+        .info-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #e74c3c; /* 鮮やかな赤色のアシスト */
+            font-weight: 900;
+            font-size: 20px;
         }
 
-        /* 右側の具体的な中身の文字 */
-        .content {
-            font-weight: 700;
-            color: #2c3e50;
-            font-size: 20px; /* 文字を大きくして目立たせる */
+        /* 💡 呼びかけ人セクション */
+        .section-box {
+            background: #ffffff;
+            padding: 30px 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
         }
-        
-        /* 弁士の名前を目立たせる強調 */
-        .highlight-name {
-            background: linear-gradient(transparent 60%, #fff3b3 60%); /* 黄色のマーカー線 */
-            padding: 0 2px;
+
+        h2 {
+            font-size: 18px;
+            color: #7f8c8d;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 10px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        .names-list {
+            font-size: 16px;
+            color: #34495e;
+            font-weight: 500;
+        }
+
+        /* 💡 連絡先セクション（メールアドレスのリンク化） */
+        .contact-box {
+            text-align: center;
+            background: #e9eef3;
+            padding: 20px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .contact-box a {
+            color: #2980b9;
+            text-decoration: none;
+            border-bottom: 1px dashed #2980b9;
+            transition: all 0.2s ease;
+        }
+
+        .contact-box a:hover {
+            color: #1abc9c;
+            border-bottom-style: solid;
+        }
+
+        /* スマートフォン画面への対応（レスポンシブ対応） */
+        @media (max-width: 600px) {
+            .container { margin: 10px auto; padding: 10px; }
+            .main-title-box { padding: 30px 15px; }
+            h1 { font-size: 24px; }
+            .info-card { padding: 25px 20px; }
+            .info-list li { font-size: 16px; }
+            .section-box { padding: 20px; }
         }
     </style>
 </head>
 <body>
 
-    <h1>テストホームページ</h1>
-    <p class="subtitle">ネット上に無料で公開するテスト中です！</p>
+    <div class="container">
 
-    <!-- 💡 追加した情報エリア -->
-    <div class="info-card">
-        <div class="info-row">
-            <span class="label">日程</span>
-            <span class="content">７月４日</span>
+        <!-- 1. メインタイトル -->
+        <div class="main-title-box">
+            <h1>大学教職員も<br>スタンディング（アピール）します！！</h1>
         </div>
-        <div class="info-row">
-            <span class="label">場所</span>
-            <span class="content">四条烏丸北西角</span>
+
+        <!-- 2. 日時・場所・注意点のカード -->
+        <div class="info-card">
+            <ul class="info-list">
+                <li>2026年７月６日（月）18時～18時40分</li>
+                <li>四条烏丸交差点・南西側（予定）</li>
+                <li>大学関係者以外の方もぜひご参加ください。</li>
+                <li>プラカードをお持ちください（主催者でも準備します）。</li>
+            </ul>
         </div>
-        <div class="info-row">
-            <span class="label">弁士</span>
-            <span class="content">
-                <span class="highlight-name">田中さん</span>、
-                <span class="highlight-name">山田さん</span>、
-                <span class="highlight-name">佐藤さん</span>
-            </span>
+
+        <!-- 3. 呼びかけ人セクション -->
+        <div class="section-box">
+            <h2>呼びかけ人（アイウエオ順）</h2>
+            <div class="names-list">
+                安東正玄（立命館大学）、奥野恒久（龍谷大学）、駒込武（京都大学）、瀧本知加（京都府立大学）
+            </div>
         </div>
+
+        <!-- 4. 連絡先ボックス -->
+        <div class="contact-box">
+            連絡先：細川孝（<a href="mailto:hosokawa@biz.ryukoku.ac.jp">hosokawa@biz.ryukoku.ac.jp</a>）
+        </div>
+
     </div>
 
 </body>
