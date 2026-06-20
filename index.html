@@ -22,24 +22,18 @@
             padding: 20px;
         }
 
-        /* 最も目立たせるメインタイトル部分 */
+        /* 💡 メインタイトル部分（背景を透過にし、上下の余白を調整） */
         .main-title-box {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); /* 深みのあるブルーのグラデーション */
-            color: #ffffff;
-            padding: 40px 30px;
-            border-radius: 16px;
             text-align: center;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
             margin-bottom: 30px;
         }
 
-        h1 {
-            font-size: 32px;
-            font-weight: 800;
-            margin: 0;
-            line-height: 1.4;
-            letter-spacing: 0.05em;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        /* 💡 タイトル画像がスマホ画面からはみ出さないように設定 */
+        .main-title-box img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
         }
 
         /* 開催概要カード（見やすさを追求） */
@@ -80,7 +74,7 @@
             font-size: 20px;
         }
 
-        /* 💡 地図画像を表示するボックス */
+        /* 地図画像を表示するボックス */
         .map-box {
             background: #ffffff;
             padding: 20px;
@@ -90,7 +84,7 @@
             text-align: center;
         }
         
-        /* 💡 画像を丸角にしてスマホでもきれいにはみ出さないように設定 */
+        /* 画像を丸角にしてスマホでもきれいにはみ出さないように設定 */
         .map-box img {
             max-width: 100%;
             height: auto;
@@ -150,8 +144,7 @@
         /* スマートフォン画面への対応（レスポンシブ対応） */
         @media (max-width: 600px) {
             .container { margin: 10px auto; padding: 10px; }
-            .main-title-box { padding: 30px 15px; }
-            h1 { font-size: 24px; }
+            .main-title-box { margin-bottom: 20px; }
             .info-card { padding: 25px 20px; }
             .info-list li { font-size: 16px; }
             .section-box { padding: 20px; }
@@ -163,9 +156,9 @@
 
     <div class="container">
 
-        <!-- 1. メインタイトル -->
+        <!-- 💡 1. メインタイトル（文字から画像へ置き換え） -->
         <div class="main-title-box">
-            <h1>大学教職員も<br>スタンディング（アピール）します！！</h1>
+            <img src="title01.png" alt="大学教職員もスタンディング（アピール）します！！">
         </div>
 
         <!-- 2. 日時・場所・注意点のカード -->
@@ -178,7 +171,7 @@
             </ul>
         </div>
 
-        <!-- 💡 3. Googleマップから画像（map01.jpeg）への置き換えエリア -->
+        <!-- 3. 地図画像（map01.jpg）エリア -->
         <div class="map-box">
             <img src="map01.jpg" alt="四条烏丸交差点・南西側の地図案内">
         </div>
