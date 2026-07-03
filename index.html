@@ -22,13 +22,12 @@
             padding: 20px;
         }
 
-        /* 💡 メインタイトル部分（背景を透過にし、上下の余白を調整） */
+        /* メインタイトル部分 */
         .main-title-box {
             text-align: center;
             margin-bottom: 30px;
         }
 
-        /* 💡 タイトル画像がスマホ画面からはみ出さないように設定 */
         .main-title-box img {
             max-width: 100%;
             height: auto;
@@ -36,37 +35,36 @@
             margin: 0 auto;
         }
 
-        /* ✨ タイトルの下のメッセージスタイル */
+        /* タイトルの下のメッセージスタイル */
         .sub-message {
-            font-size: 24px;          /* 22px〜24pxにサイズアップして存在感を強化 */
-            font-weight: 700;         /* しっかりとした太字に変更 */
-            color: #2c3e50;           /* 開催概要カードと統一感のある、知的で洗練されたディープネイビー */
-            letter-spacing: 0.08em;   /* 文字間隔をさらに広げ、パッと見やすくて美しい余白に */
-            line-height: 1.6;         /* 大きめの文字に適した行間 */
-            text-align: center;       /* 中央揃え */
-            margin-top: 25px;         /* 画像との間の余白 */
-            margin-bottom: 25px;      /* 下の追加画像との間の余白を調整 */
-            padding: 0 15px;          /* スマホ等での端の詰まり防止 */
+            font-size: 24px;
+            font-weight: 700;
+            color: #2c3e50;
+            letter-spacing: 0.08em;
+            line-height: 1.6;
+            text-align: center;
+            margin-top: 25px;
+            margin-bottom: 25px;
+            padding: 0 15px;
         }
 
         /* 新しく挿入する画像（senden1.png）のボックス設定 */
         .senden-image-box {
             text-align: center;
-            margin-bottom: 40px;      /* 下の日時カードとの間の余白 */
+            margin-bottom: 40px;
             padding: 0 10px;
         }
 
-        /* 画像がはみ出さないようにし、少し角を丸くして柔らかい印象に */
         .senden-image-box img {
             max-width: 100%;
             height: auto;
             border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03); /* ほんの少しだけ影をつけて綺麗に見せます */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
             display: block;
             margin: 0 auto;
         }
 
-        /* 開催概要カード（見やすさを追求） */
+        /* 開催概要カード */
         .info-card {
             background: #ffffff;
             padding: 40px;
@@ -94,12 +92,11 @@
             margin-bottom: 0;
         }
 
-        /* 行頭のスタイリッシュなチェックマーク */
         .info-list li::before {
             content: "✓";
             position: absolute;
             left: 0;
-            color: #e74c3c; /* 鮮やかな赤色のアシスト */
+            color: #e74c3c;
             font-weight: 900;
             font-size: 20px;
         }
@@ -114,7 +111,6 @@
             text-align: center;
         }
         
-        /* 画像を丸角にしてスマホでもきれいにはみ出さないように設定 */
         .map-box img {
             max-width: 100%;
             height: auto;
@@ -149,7 +145,7 @@
             font-weight: 500;
         }
 
-        /* 連絡先セクション（メールアドレスのリンク化） */
+        /* 連絡先セクション */
         .contact-box {
             text-align: center;
             background: #e9eef3;
@@ -157,7 +153,7 @@
             border-radius: 12px;
             font-size: 16px;
             font-weight: 700;
-            margin-bottom: 30px; /* 💡 ボタンとの間に余白を作るために追加 */
+            margin-bottom: 30px;
         }
 
         .contact-box a {
@@ -172,7 +168,7 @@
             border-bottom-style: solid;
         }
 
-        /* ✨ 追加：SNSシェアボタン全体の枠組み */
+        /* SNSシェアボタン全体の枠組み */
         .share-container {
             text-align: center;
             margin-top: 40px;
@@ -189,13 +185,12 @@
 
         .share-buttons {
             display: flex;
-            /* 🛠️ 修正：エラーのない正しい指定に修正しました */
             justify-content: center;
-            gap: 12px; /* ボタン同士の間隔 */
-            flex-wrap: wrap; /* スマホで入り切らない場合に折り返す */
+            gap: 12px;
+            flex-wrap: wrap;
         }
 
-        /* ✨ 追加：各シェアボタンの共通スタイル */
+        /* 各シェアボタンの共通スタイル */
         .share-btn {
             display: inline-flex;
             align-items: center;
@@ -205,24 +200,23 @@
             font-weight: 700;
             color: #ffffff;
             text-decoration: none;
-            border-radius: 30px; /* 丸みのある可愛いボタン */
+            border-radius: 30px;
             transition: all 0.2s ease;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
             min-width: 110px;
         }
 
         .share-btn:hover {
-            transform: translateY(-2px); /* ホバー時に少し浮き上がらせる */
+            transform: translateY(-2px);
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
             opacity: 0.9;
         }
 
-        /* 各SNSの少し落ち着かせたブランドカラー設定 */
-        .btn-x { background-color: #111111; }         /* X（旧Twitter） */
-        .btn-fb { background-color: #3b5998; }        /* Facebook */
-        .btn-line { background-color: #06b712; }      /* LINE */
+        .btn-x { background-color: #111111; }
+        .btn-fb { background-color: #3b5998; }
+        .btn-line { background-color: #06b712; }
 
-        /* スマートフォン画面への対応（レスポンシブ対応） */
+        /* スマートフォン画面への対応 */
         @media (max-width: 600px) {
             .container { margin: 10px auto; padding: 10px; }
             .main-title-box { margin-bottom: 20px; }
@@ -232,7 +226,6 @@
             .info-list li { font-size: 16px; }
             .section-box { padding: 20px; }
             .map-box { padding: 10px; }
-            /* ✨ スマホの時はボタンの横幅を少し広げて押しやすく */
             .share-btn { padding: 12px 20px; flex: 1; min-width: 90px; font-size: 14px; }
             .share-buttons { padding: 0 10px; }
         }
