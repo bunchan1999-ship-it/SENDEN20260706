@@ -101,6 +101,36 @@
             font-size: 20px;
         }
 
+        /* ✨ 追加：宣伝結果（報告メッセージ）の目立つボックス */
+        .report-box {
+            background-color: #fff9f3; /* 温かみがあり目立つ薄いオレンジ背景 */
+            border-left: 5px solid #ff8c00; /* 左側にアクセントの線を配置 */
+            padding: 15px 20px;
+            margin-top: 25px; /* 「プラカードをお持ちください」との間隔 */
+            border-radius: 4px 12px 12px 4px;
+        }
+
+        .report-text {
+            font-size: 19px;
+            font-weight: 800; /* しっかりとした太字 */
+            color: #d35400; /* 深みのあるオレンジでメッセージを強調 */
+            margin: 0 0 15px 0;
+            line-height: 1.5;
+        }
+
+        /* ✨ 追加：報告写真用のボックス設定 */
+        .report-image-box {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .report-image-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px; /* 角をほんのり丸く */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* 写真が綺麗に見える影 */
+        }
+
         /* 地図画像を表示するボックス */
         .map-box {
             background: #ffffff;
@@ -224,6 +254,7 @@
             .senden-image-box { margin-bottom: 25px; }
             .info-card { padding: 25px 20px; }
             .info-list li { font-size: 16px; }
+            .report-text { font-size: 17px; } /* スマホでは文字サイズを少し調整 */
             .section-box { padding: 20px; }
             .map-box { padding: 10px; }
             .share-btn { padding: 12px 20px; flex: 1; min-width: 90px; font-size: 14px; }
@@ -254,6 +285,15 @@
                 <li>大学関係者以外の方もぜひご参加ください。</li>
                 <li>プラカードをお持ちください（主催者でも準備します）。</li>
             </ul>
+
+            <div class="report-box">
+                <p class="report-text">
+                    🎉 宣伝へのご協力ありがとうございました。<br>当日の参加者は16名でした！
+                </p>
+                <div class="report-image-box">
+                    <img src="20260706a.jpg" alt="7月6日の宣伝の様子（参加者16名）">
+                </div>
+            </div>
         </div>
 
         <div class="map-box">
